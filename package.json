@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Form Builder Team <form-builder-team@digital.justice.gov.uk>",
   "scripts": {
-    "start": "cross-env DEBUG=transform* node app",
+    "start": "cross-env DEBUG=transformers* node app",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },

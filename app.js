@@ -15,8 +15,8 @@ const {
 
 const PACKAGE = require('./package')
 
-const log = debug('transform:log')
-const error = debug('transform:error')
+const log = debug('transformers:log')
+const error = debug('transformers:error')
 
 const hasFileUploadInFormFlag = (commander) => Reflect.has(commander, 'hasFileUploadInForm')
 const getFileUploadInFormFlag = (commander) => Reflect.get(commander, 'hasFileUploadInForm')
