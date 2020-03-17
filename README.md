@@ -1,4 +1,4 @@
-# transform-file-upload-components
+# fb-transformers
 
 Functions in this module transform **Form Builder** `fileupload` components into `upload` components and create any `page.uploadCheck` or `page.uploadSummary` steps, too.
 
