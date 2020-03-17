@@ -1,0 +1,44 @@
+{
+  "name": "@ministryofjustice/fb-transformers",
+  "description": "Component transformation functions with a CLI for Form Builder",
+  "version": "1.0.0",
+  "author": "Form Builder Team <form-builder-team@digital.justice.gov.uk>",
+  "scripts": {
+    "start": "cross-env DEBUG=transform* node app",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "bugs": {
+    "url": "https://github.com/@ministryofjustice/fb-transformers/issues"
+  },
+  "homepage": "https://github.com/@ministryofjustice/fb-transformers",
+  "license": "MIT",
+  "main": "./app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/@ministryofjustice/fb-transformers.git"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "commander": "^5.0.0",
+    "cross-env": "^7.0.2",
+    "debug": "^4.1.1",
+    "glob-all": "^3.1.0",
+    "sacred-fs": "^1.0.14"
+  }
+}
