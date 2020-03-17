@@ -81,13 +81,13 @@ These functions are exposed to the command line so that a developer can update a
 All of these flags should be prefaced with `npm start --`. The double hyphen indicates that subsequent flags should be passed to the command. For example, assuming you have cloned a Form repository named `ComponentFileUpload` to your environment:
 
 ```sh
-npm start -- --has ~/Documents/formbuilder/forms/ComponentFileUpload
+npm start -- --has-file-upload-in-form ~/Documents/formbuilder/forms/ComponentFileUpload
 ```
 
 This will set the `DEBUG` variable to enable logging in the terminal, and then execute the command:
 
 ```sh
-node app --has ~/Documents/formbuilder/forms/ComponentFileUpload
+node app --has-file-upload-in-form ~/Documents/formbuilder/forms/ComponentFileUpload
 ```
 
 Simply executing this on its own will invoke the functions silently, which is probably not what you want.
