@@ -1,7 +1,7 @@
 {
   "name": "@ministryofjustice/fb-transformers",
   "description": "Component transformation functions with a CLI for Form Builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Form Builder Team <form-builder-team@digital.justice.gov.uk>",
   "scripts": {
     "start": "cross-env DEBUG=transformers* node app",
