@@ -8,6 +8,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
+  "bin": {
+    "fb-transformers": "./app.js"
+  },
   "bugs": {
     "url": "https://github.com/@ministryofjustice/fb-transformers/issues"
   },

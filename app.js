@@ -45,8 +45,13 @@ const getUploadSummaryFlag = (commander) => Reflect.get(commander, 'hasUploadSum
   } = PACKAGE
 
   const {
-    argv
+    argv,
+    env: {
+      DEBUG = 'transformers*'
+    }
   } = process
+
+  debug.enable(DEBUG)
 
   commander
     .version(version)
