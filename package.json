@@ -1,12 +1,15 @@
 {
   "name": "@ministryofjustice/fb-transformers",
   "description": "Component transformation functions with a CLI for Form Builder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Form Builder Team <form-builder-team@digital.justice.gov.uk>",
   "scripts": {
     "start": "cross-env DEBUG=transformers* node app",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
+  },
+  "bin": {
+    "fb-transformers": "./app.js"
   },
   "bugs": {
     "url": "https://github.com/@ministryofjustice/fb-transformers/issues"
