@@ -1,9 +1,11 @@
 version: 2.1
+orbs:
+  slack: circleci/slack@3.4.2
 
 jobs:
   lint:
     docker:
-      - image: circleci/node:12.4.0
+      - image: cimg/node:14.5
     steps:
       - checkout
       - run:
@@ -12,9 +14,14 @@ jobs:
       - run:
           name: Lint
           command: npm run lint
+      - slack/status: &slack_status
+          fail_only: true
+          only_for_branches: master
+          failure_message: ":facepalm:  Failed job $CIRCLE_JOB  :homer-disappear:"
+          include_job_number_field: false
   publish:
     docker:
-      - image: circleci/node:12.4.0
+      - image: cimg/node:14.5
     steps:
       - checkout
       - run:
@@ -34,7 +41,9 @@ jobs:
             if [ "$VERSION" != "$PUBLISHED_VERSION" ]
             then
               npm publish
+              curl -X POST -H 'Content-type: application/json' --data "{\"text\":\":woohoo:  Successfully published ${CIRCLE_PROJECT_REPONAME} ${VERSION}  :ship_it_parrot:\"}" "$SLACK_WEBHOOK"
             fi
+      - slack/status: *slack_status
 
 workflows:
   commit-workflow:
