@@ -5,7 +5,7 @@ orbs:
 jobs:
   lint:
     docker:
-      - image: circleci/node:12.4.0
+      - image: cimg/node:14.5
     steps:
       - checkout
       - run:
@@ -21,7 +21,7 @@ jobs:
           include_job_number_field: false
   publish:
     docker:
-      - image: circleci/node:12.4.0
+      - image: cimg/node:14.5
     steps:
       - checkout
       - run:
